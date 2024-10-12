@@ -4,94 +4,93 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Logo Links</title>
+    <title>GargiMitra Studio</title>
     <style>
-        /* Basic styling for body */
+        /* Reset margin and padding for body */
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
             margin: 0;
             padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-        }
-
-        /* Container for the buttons */
-        .container {
-            width: 100%;
-            max-width: 400px;
-            background-color: #ffffff;
-            padding: 20px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
             text-align: center;
         }
 
-        /* Common style for all logos */
-        .logo-btn {
-            width: 100%;
-            margin: 10px 0;
-            padding: 20px;
-            background-color: #e0e0e0;
-            border-radius: 10px;
-            text-align: center;
-            font-size: 1.2rem;
-            border: none;
+        /* Wrapper for title, text, and logos */
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        /* Title styling */
+        h1 {
+            font-size: 2rem;
+            margin: 0;
+            color: #333;
+        }
+
+        /* Note styling */
+        p {
+            margin: 5px 0 20px 0;
+            font-size: 1rem;
+            color: #555;
+        }
+
+        /* Logo image styling */
+        .logo {
+            width: 80px;
+            height: 80px;
+            object-fit: contain; /* Keep aspect ratio intact */
             cursor: pointer;
-            transition: background-color 0.3s ease;
         }
 
-        /* Hover effect for buttons */
-        .logo-btn:hover {
-            background-color: #d0d0d0;
-        }
-
-        /* WhatsApp button styling */
-        .whatsapp {
-            color: #25d366;
-        }
-
-        /* Instagram and Call button styling for now can stay as text placeholders, you can add images later */
-
-        /* Styling for the logo images */
-        .logo-btn img {
-            width: 60px;
-            height: 60px;
-            object-fit: contain; /* Ensures the image keeps its aspect ratio */
-        }
-
-        /* Media query for mobile-first approach */
-        @media only screen and (max-width: 600px) {
-            .logo-btn {
-                padding: 15px;
-                font-size: 1rem;
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.5rem;
             }
 
-            .logo-btn img {
-                width: 50px;
-                height: 50px;
+            p {
+                font-size: 0.9rem;
+            }
+
+            .logo {
+                width: 60px;
+                height: 60px;
             }
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <!-- WhatsApp Button with image logo -->
-        <button class="logo-btn whatsapp" onclick="window.location.href='https://wa.me/message/OTUXYVFSOEUCA1'">
-            <img src="./assets/logos/whatsapp_logo.png" alt="WhatsApp Logo">
-        </button>
+    <div class="content">
+        <!-- Title -->
+        <h1>GargiMitra Studio</h1>
 
-        <!-- Instagram Button with image logo -->
-        <button class="logo-btn instagram" onclick="window.location.href='https://www.instagram.com/gargimitra_studio'">
-            <img src="./assets/logos/instagram_logo.png" alt="Instagram Logo">
-        </button>
+        <!-- Note to users -->
+        <p style="margin: 0;">
+            <strong>Your dream wardrobe is a click away</strong><br><i>Tap the icon below to connect with us</i>
+        </p>
 
-        <!-- Call Button with image logo -->
-        <button class="logo-btn call" onclick="window.location.href='tel:+918088396735'">
-            <img src="./assets/logos/phone_logo.png" alt="Call Logo">
-        </button>
+        <!-- WhatsApp Logo -->
+        <a href="https://wa.me/" target="_blank">
+            <img src="assets/logos/whatsapp_logo.png" alt="WhatsApp Logo" class="logo">
+        </a>
+
+        <!-- Instagram Logo -->
+        <a href="https://www.instagram.com/" target="_blank">
+            <img src="assets/logos/instagram_logo.png" alt="Instagram Logo" class="logo">
+        </a>
+
+        <!-- Call Logo -->
+        <a href="tel:+1234567890">
+            <img src="assets/logos/phone_logo.png" alt="Phone Logo" class="logo">
+        </a>
     </div>
 
 </body>
